@@ -238,7 +238,7 @@ body::before {
 .hero-title {
     margin: 0 0 0.75rem;
     font-family: 'Rubik Distressed', var(--font-mono);
-    font-size: clamp(1.5rem, 6.5vw, 5rem);
+    font-size: clamp(2.25rem, 10vw, 7rem);
     font-weight: 400;
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -702,7 +702,7 @@ body::before {
 
 @media (max-width: 380px) {
     .hero-title {
-        font-size: clamp(1.25rem, 5vw, 2rem);
+        font-size: clamp(1.5rem, 6.5vw, 2.75rem);
         letter-spacing: 0.02em;
     }
 }
