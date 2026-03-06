@@ -1,0 +1,9 @@
+# Netlify config for crkbbyx.github.io (Wasteland)
+# No build step — static HTML/CSS/JS
+
+[build]
+  publish = "."
+  # No build command; leave empty or omit
+
+# Optional: redirects, headers, or form detection
+# Forms are auto-detected from data-netlify="true" in HTML
