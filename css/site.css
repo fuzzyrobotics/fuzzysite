@@ -1,4 +1,4 @@
-/* Fuzzy Robotics — cyberpunk 80s synth + 90s grunge */
+/* Fuzzy Robotics - cyberpunk 80s synth + 90s grunge */
 :root {
     --bg: #0d0f14;
     --bg-deep: #08090d;
@@ -145,8 +145,8 @@ body::before {
 /* Hero */
 .hero {
     position: relative;
-    min-height: 320px;
-    padding: 4rem 0 5rem;
+    min-height: 260px;
+    padding: 3.25rem 0 3.75rem;
     text-align: center;
     background:
         linear-gradient(180deg,
@@ -211,7 +211,7 @@ body::before {
     position: absolute;
     left: 0;
     right: 0;
-    top: 52%;
+    top: 55%;
     transform: translateY(-50%);
     height: 38px;
     z-index: 1;
@@ -307,10 +307,219 @@ body::before {
     border-top-color: var(--border-subtle);
 }
 
-.section-products,
-.section-experiments {
+.section-products {
     background: var(--bg);
     border-top-color: var(--border-subtle);
+}
+
+.about-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    gap: 2.5rem;
+    align-items: flex-start;
+}
+
+.about-main {
+    max-width: 640px;
+}
+
+.experiments-side {
+    align-self: stretch;
+}
+
+.experiments-side .section-title {
+    margin-top: 0;
+}
+
+.section-people {
+    background: radial-gradient(circle at top, rgba(5, 217, 232, 0.1), transparent 55%), var(--surface-alt);
+    border-top-color: var(--border-subtle);
+}
+
+.org-tree {
+    margin-top: 1.75rem;
+    padding: 1.75rem 1.5rem;
+    border-radius: 10px;
+    background:
+        linear-gradient(135deg, rgba(0, 212, 170, 0.12), rgba(255, 42, 109, 0.08)),
+        radial-gradient(circle at top left, rgba(5, 217, 232, 0.1), transparent 55%),
+        radial-gradient(circle at bottom right, rgba(255, 42, 109, 0.12), transparent 55%),
+        var(--surface);
+    border: 1px solid var(--border);
+    box-shadow:
+        0 0 0 1px rgba(0, 0, 0, 0.6),
+        0 18px 35px rgba(0, 0, 0, 0.7),
+        0 0 40px rgba(5, 217, 232, 0.2);
+}
+
+.org-node {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.org-node-root {
+    padding-bottom: 0.75rem;
+}
+
+.org-node-line-down {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 1.25rem;
+    background: linear-gradient(to bottom, var(--accent), var(--neon-pink));
+    opacity: 0.7;
+}
+
+.org-node-card {
+    position: relative;
+    padding: 1.5rem 1.75rem 1.5rem;
+    max-width: 100%;
+    background: radial-gradient(circle at top left, rgba(0, 0, 0, 0.5), transparent 55%), var(--surface-alt);
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    box-shadow:
+        0 14px 30px rgba(0, 0, 0, 0.85),
+        0 0 0 1px rgba(0, 0, 0, 0.8),
+        inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+.org-node-header {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    margin-bottom: 0.75rem;
+}
+
+.org-node-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 999px;
+    object-fit: cover;
+    filter: grayscale(0.3) contrast(1.1);
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.85), 0 0 20px rgba(5, 217, 232, 0.35);
+}
+
+.org-node-header-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.org-node-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 10px;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(5, 217, 232, 0.18), rgba(255, 42, 109, 0.22));
+    -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0.9;
+    pointer-events: none;
+}
+
+.org-node-label {
+    margin: 0 0 0.1rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--text-muted);
+}
+
+.org-node-name {
+    margin: 0 0 0.4rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+.org-node-role {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.org-node-tagline {
+    margin: 0 0 0.9rem;
+    font-size: 0.95rem;
+    color: rgba(5, 217, 232, 0.9);
+    text-shadow: 0 0 18px rgba(5, 217, 232, 0.3);
+}
+
+.org-node-body {
+    margin: 0 0 0.75rem;
+    font-size: 0.95rem;
+    color: var(--text);
+}
+
+.org-node-body:last-of-type {
+    margin-bottom: 0;
+}
+
+.org-node-links {
+    margin-top: 0.25rem;
+}
+
+.org-node-links a {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.org-node-links a:hover {
+    text-decoration: underline;
+}
+
+.org-node-children {
+    position: relative;
+    margin-top: 1.75rem;
+    padding-top: 1.75rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+}
+
+.org-node-children::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    max-width: 420px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.4), transparent);
+    opacity: 0.6;
+}
+
+.org-node-child {
+    padding-top: 1.25rem;
+}
+
+.org-node-connector {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 1.25rem;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.6), transparent);
+    opacity: 0.7;
+}
+
+.org-node-card-cta {
+    text-align: left;
+}
+
+.org-node-cta-btn {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
 }
 
 .game-card {
@@ -693,16 +902,23 @@ body::before {
         gap: 1rem;
     }
     .hero {
-        padding: 3rem 0 4rem;
+        padding: 2.5rem 0 3rem;
     }
     .hero-title {
-        letter-spacing: 0.04em;
+        font-size: clamp(2.4rem, 10vw, 3.25rem);
+        letter-spacing: 0.08em;
+    }
+    .about-layout {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .experiments-side {
+        margin-top: 2rem;
     }
 }
 
 @media (max-width: 380px) {
     .hero-title {
-        font-size: clamp(1.5rem, 6.5vw, 2.75rem);
-        letter-spacing: 0.02em;
+        font-size: clamp(2rem, 11vw, 3rem);
+        letter-spacing: 0.06em;
     }
 }
