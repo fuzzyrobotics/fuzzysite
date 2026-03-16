@@ -1,4 +1,4 @@
-/* Fuzzy Robotics — hero tech particles (canvas, no external deps) */
+/* Fuzzy Robotics - hero tech particles (canvas, no external deps) */
 (function () {
     var canvas = document.getElementById('heroParticles');
     if (!canvas || canvas.getContext === undefined) return;

@@ -1,5 +1,5 @@
 # Netlify config for crkbbyx.github.io (Wasteland)
-# No build step — static HTML/CSS/JS
+# No build step - static HTML/CSS/JS
 
 [build]
   publish = "."
