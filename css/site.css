@@ -1,22 +1,22 @@
-/* Fuzzy Robotics - cyberpunk 80s synth + 90s grunge */
+/* Fuzzy Robotics - Null State terminal branding style */
 :root {
-    --bg: #0d0f14;
-    --bg-deep: #08090d;
-    --surface: #14191f;
-    --surface-alt: #0e1116;
-    --border: #2a3142;
-    --border-subtle: #1a1f2a;
-    --text: #e2e5ec;
-    --text-muted: #7d8599;
-    /* Synth neon */
-    --accent: #00d4aa;
-    --accent-dim: #00a884;
-    --accent-glow: rgba(0, 212, 170, 0.18);
-    --accent-glow-strong: rgba(0, 212, 170, 0.28);
-    --neon-pink: #ff2a6d;
-    --neon-pink-glow: rgba(255, 42, 109, 0.22);
-    --neon-blue: #05d9e8;
-    --neon-blue-glow: rgba(5, 217, 232, 0.18);
+    --bg: #0c0c0c;
+    --bg-deep: #05070a;
+    --surface: #0f141c;
+    --surface-alt: #080b0f;
+    --border: #1e2a3a;
+    --border-subtle: #121b26;
+    --text: #c0d0e0;
+    --text-muted: #6272a4;
+    /* Null State neon */
+    --accent: #00ff41;
+    --accent-dim: #00cc33;
+    --accent-glow: rgba(0, 255, 65, 0.15);
+    --accent-glow-strong: rgba(0, 255, 65, 0.28);
+    --neon-pink: #ff1493;
+    --neon-pink-glow: rgba(255, 20, 147, 0.22);
+    --neon-blue: #00ffff;
+    --neon-blue-glow: rgba(0, 255, 255, 0.18);
     --neon-purple: #9d4edd;
     --neon-orange: #ff6b35;
     /* Grunge */
@@ -24,9 +24,11 @@
     --grunge-olive: #4a5d23;
     --grunge-mustard: #c4a035;
     --grunge-dirt: rgba(60, 45, 35, 0.4);
-    --grunge-warm: rgba(80, 50, 30, 0.12);
-    --font-sans: 'Outfit', system-ui, sans-serif;
+    --grunge-warm: rgba(0, 255, 65, 0.02);
+    --font-sans: 'JetBrains Mono', 'Outfit', system-ui, sans-serif;
     --font-mono: 'JetBrains Mono', monospace;
+    --font-terminal: 'Share Tech Mono', monospace;
+    --font-pixel: 'Press Start 2P', monospace;
 }
 
 *,
@@ -237,10 +239,10 @@ body::before {
 
 .hero-title {
     margin: 0 0 0.75rem;
-    font-family: 'Rubik Distressed', var(--font-mono);
+    font-family: var(--font-terminal);
     font-size: clamp(2.25rem, 10vw, 7rem);
-    font-weight: 400;
-    letter-spacing: 0.12em;
+    font-weight: 900;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
     background: linear-gradient(135deg, var(--neon-blue) 0%, var(--accent) 35%, var(--neon-pink) 70%, var(--neon-orange) 100%);
     -webkit-background-clip: text;
@@ -554,7 +556,7 @@ body::before {
 
 .section-title {
     margin: 0 0 0.5rem;
-    font-family: 'Teko', var(--font-sans);
+    font-family: var(--font-terminal);
     font-size: 1.75rem;
     font-weight: 700;
     letter-spacing: 0.06em;
@@ -922,3 +924,181 @@ body::before {
         letter-spacing: 0.06em;
     }
 }
+
+/* Ethos Quote Widget */
+.ethos-container {
+    margin-top: 0.5rem;
+    margin-bottom: 3.5rem;
+    text-align: center;
+    width: 100%;
+}
+
+.ethos-quote {
+    margin: 0 auto;
+    padding: 0 1rem;
+    font-family: var(--font-terminal);
+    font-size: clamp(1.3rem, 3.5vw, 1.9rem);
+    font-weight: 700;
+    line-height: 1.5;
+    color: var(--text);
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+    border: none;
+    letter-spacing: 0.02em;
+}
+
+.ethos-cite {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    margin-top: 0.75rem;
+    text-align: right;
+    font-style: normal;
+    font-family: var(--font-mono);
+    opacity: 0.85;
+}
+
+.ethos-highlight {
+    font-weight: bold;
+    display: inline-block;
+}
+
+.ethos-highlight-pink {
+    color: var(--neon-pink);
+    text-shadow: 0 0 12px var(--neon-pink-glow);
+}
+
+.ethos-highlight-green {
+    color: var(--accent);
+    text-shadow: 0 0 12px var(--accent-glow);
+}
+
+.ethos-highlight-cyan {
+    color: var(--neon-blue);
+    text-shadow: 0 0 12px var(--neon-blue-glow);
+}
+
+/* Skunkworks Console Widget */
+.console-box {
+    margin-top: 2rem;
+    background: #090c10;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+}
+
+.console-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    background: var(--surface-alt);
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.console-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+.console-dot-red { background: #ff5f56; }
+.console-dot-yellow { background: #ffbd2e; }
+.console-dot-green { background: #27c93f; }
+
+.console-title {
+    margin-left: 6px;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.console-body {
+    padding: 12px 14px;
+    height: 200px;
+    overflow-y: auto;
+    color: #00d4aa;
+    line-height: 1.4;
+    white-space: pre-wrap;
+    word-break: break-all;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) #090c10;
+}
+
+.console-body::-webkit-scrollbar {
+    width: 6px;
+}
+.console-body::-webkit-scrollbar-track {
+    background: #090c10;
+}
+.console-body::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 3px;
+}
+
+.console-line {
+    margin: 2px 0;
+}
+.console-line.warn { color: var(--neon-orange); }
+.console-line.error { color: var(--neon-pink); }
+.console-line.success { color: var(--accent); }
+.console-line.muted { color: var(--text-muted); }
+
+.console-input-line {
+    display: flex;
+    align-items: center;
+    padding: 6px 14px;
+    border-top: 1px dashed var(--border-subtle);
+    background: rgba(0, 0, 0, 0.3);
+    color: var(--text);
+}
+
+.console-prompt {
+    color: var(--neon-blue);
+    margin-right: 6px;
+}
+
+.console-cursor {
+    display: inline-block;
+    width: 6px;
+    height: 14px;
+    background: var(--accent);
+    margin-left: 4px;
+    animation: console-blink 1s step-end infinite;
+}
+
+@keyframes console-blink {
+    50% { opacity: 0; }
+}
+
+.console-actions {
+    display: flex;
+    gap: 1px;
+    background: var(--border-subtle);
+    border-top: 1px solid var(--border-subtle);
+}
+
+.console-btn {
+    flex: 1;
+    padding: 10px 12px;
+    background: var(--surface);
+    border: none;
+    color: var(--text);
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    outline: none;
+}
+
+.console-btn:hover {
+    background: var(--bg);
+    color: var(--neon-blue);
+}
+
+.console-btn:active {
+    background: var(--bg-deep);
+}
+

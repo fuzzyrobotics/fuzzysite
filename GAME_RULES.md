@@ -1,4 +1,4 @@
-# PTSD: Terminal 01 - Game Rules
+# Null State™: Terminal 01 - Game Rules
 
 A cybersecurity-themed board game for 2–6 players. Hack locations, collect data cards, move market tracks, and score **fame** plus **end-game data value** to win.
 

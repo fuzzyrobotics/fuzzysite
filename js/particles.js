@@ -13,10 +13,10 @@
     var linkDistance = 120;
 
     var colors = [
-        [5, 217, 232],    /* neon-blue */
-        [0, 212, 170],    /* accent teal */
-        [255, 42, 109],   /* neon-pink */
-        [157, 78, 221]    /* neon-purple */
+        [0, 255, 255],    /* Cyber cyan */
+        [0, 255, 65],     /* Matrix green */
+        [255, 20, 147],   /* Hot pink */
+        [157, 78, 221]    /* Purple */
     ];
 
     function setSize() {
