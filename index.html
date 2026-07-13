@@ -3,13 +3,13 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="Fuzzy Robotics LLC - Wasteland. Our shop: R&amp;D, experimentation, and first experiments. PTSD: Terminal 01, coming to Kickstarter." />
+    <meta name="description" content="Fuzzy Robotics LLC - Wasteland. Our shop: R&amp;D, experimentation, and first experiments. Null State™: Terminal 01, coming to Kickstarter." />
     <meta name="author" content="Fuzzy Robotics LLC" />
     <title>Fuzzy Robotics - Wasteland</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Orbitron:wght@700;900&family=Outfit:wght@300;500;700&family=Rubik+Distressed&family=Teko:wght@500;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Orbitron:wght@700;900&family=Outfit:wght@300;500;700&family=Rubik+Distressed&family=Teko:wght@500;700&family=Press+Start+2P&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
     <link href="css/site.css" rel="stylesheet" />
 </head>
 <body>
@@ -32,7 +32,7 @@
             <canvas class="hero-particles" id="heroParticles" aria-hidden="true"></canvas>
             <div class="container hero-text">
                 <h1 class="hero-title">Wasteland</h1>
-                <p class="hero-subtitle">Our shop for R&amp;D and experimentation<br />first <span class="struck">product</span> experiment coming to Kickstarter 2026</p>
+                <p class="hero-subtitle">Our private skunkworks for prototyping and play.<br />first <span class="struck">product</span> experiment coming to Kickstarter 2026</p>
             </div>
             <div class="hero-mountains" aria-hidden="true">
                 <svg viewBox="0 0 200 24" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
@@ -49,20 +49,53 @@
         </section>
 
         <section id="about" class="section section-about">
+            <div class="container narrow ethos-container">
+                <blockquote class="ethos-quote">
+                    "Some of our experiments get laid to <span class="ethos-highlight ethos-highlight-pink">waste</span>; others, <span class="ethos-highlight ethos-highlight-green">beautiful and wild</span>, make it out into the <span class="ethos-highlight ethos-highlight-cyan">ether</span>."
+                    <cite class="ethos-cite">— Ov3rlrd</cite>
+                </blockquote>
+            </div>
+
             <div class="container about-layout">
                 <div class="about-main">
                     <h2 class="section-title">About us</h2>
-                    <p class="lead">Fuzzy Robotics runs <span class="neon-tint neon-tint-blue">Wasteland</span>, a shop for R&amp;D and experimentation. Some things get laid to <span class="neon-tint neon-tint-pink">waste</span>; others, <span class="neon-tint neon-tint-pink">beautiful</span>, make it to the <span class="neon-tint neon-tint-blue">ether</span>.</p>
-                    <p>We’re not just a game studio. We build and ship things: tabletop games, tools, and whatever else fits. Our first experiment is a cybersecurity-themed board game, PTSD: Terminal 01, coming to Kickstarter. More to come.</p>
+                    <p class="lead">We are just a bunch of devs, builders, and artists who really like to make cool shit.</p>
+                    <p>Fuzzy Robotics is our private skunkworks lab. We don’t do roadmaps, stakeholder alignment meetings, or synergy syncs. We just build stuff that excites us: hardware prototypes, cybersecurity card games, dev tools, and whatever else keeps us awake until 3 AM.</p>
+                    
+                    <!-- Interactive Skunkworks Console Widget -->
+                    <div class="console-box">
+                        <div class="console-header">
+                            <span class="console-dot console-dot-red"></span>
+                            <span class="console-dot console-dot-yellow"></span>
+                            <span class="console-dot console-dot-green"></span>
+                            <span class="console-title">skunkworks@fuzzyrobotics: ~</span>
+                        </div>
+                        <div class="console-body" id="consoleBody">
+                            <div class="console-line muted">Initializing skunkworks grid...</div>
+                            <div class="console-line success">[OK] Coffee supply loaded.</div>
+                            <div class="console-line success">[OK] Active node: Null State™ compiler listening.</div>
+                            <div class="console-line muted">Click an action below to run operations.</div>
+                        </div>
+                        <div class="console-input-line">
+                            <span class="console-prompt">fuzzyrobotics$</span>
+                            <span class="console-input-cmd" id="consoleInputCmd">ready</span>
+                            <span class="console-cursor"></span>
+                        </div>
+                        <div class="console-actions">
+                            <button type="button" class="console-btn" id="btnDiag">Run Diags</button>
+                            <button type="button" class="console-btn" id="btnIdea">Generate Idea</button>
+                            <button type="button" class="console-btn" id="btnJoke">Order Pizza</button>
+                        </div>
+                    </div>
                 </div>
                 <div id="experiments" class="experiments-side">
                     <h2 class="section-title">Experiments</h2>
                     <div class="game-card">
-                        <h3 class="game-card-title">PTSD: Terminal 01 <span class="product-badge">First <span class="struck">product</span> experiment</span></h3>
-                        <p class="game-card-meta">Board game &amp; card game · 2–6 players · ~1 hr · Coming to Kickstarter</p>
+                        <h3 class="game-card-title">Null State™: Terminal 01 <span class="product-badge">First <span class="struck">product</span> experiment</span></h3>
+                        <p class="game-card-meta">Card game · 2–6 players · ~1 hr · Coming to Kickstarter</p>
                         <p>You’re in the terminal - dark nets, data streams, high-stakes targets. Scan the network, stack exploits, and hit locations before the rest. Disrupt markets, harden positions, plant intel. Win with fame from hacks and end-game data value on the blockchain. The game uses data cards, location targets, and three market decks (Black hat, Grey hat, White hat) for a full tabletop experience.</p>
                         <p class="game-card-links">
-                            <a class="btn btn-primary" href="https://sha-6a8040d1.io/" target="_blank" rel="noopener">Kickstarter landing page - notify &amp; samples</a>
+                            <a class="btn btn-primary" href="https://nullstate.sh/" target="_blank" rel="noopener">Visit Null State™: Terminal 01 Website</a>
                         </p>
                     </div>
                 </div>
@@ -81,17 +114,17 @@
                             <div class="org-node-header">
                                 <img class="org-node-avatar" src="assets/img/1582561920860.jpg" alt="Portrait of Daniel M Simser" />
                                 <div class="org-node-header-text">
-                                    <p class="org-node-label">Top of tree</p>
+                                    <p class="org-node-label">Principal Instigator</p>
                                     <h3 class="org-node-name">Daniel M Simser</h3>
-                                    <p class="org-node-role">Also known as Ov3rlrd · Founder &amp; Principal Engineer, Fuzzy Robotics</p>
+                                    <p class="org-node-role">Also known as Ov3rlrd · Founder &amp; Chief Tinkerer</p>
                                 </div>
                             </div>
-                            <p class="org-node-tagline">20+ years of systems, infrastructure, and human-facing interfaces.</p>
+                            <p class="org-node-tagline">20+ years of systems, infrastructure, and hardware prototyping.</p>
                             <p class="org-node-body">
-                                My passion for building extends into the physical and creative realms. Having founded and led the Bozeman Makerspace for over 10 years, I now channel that decade of hardware and prototyping expertise into Fuzzy Robotics, my private skunkworks lab. I am also the lead developer of SHA-6A8040D1.io, a cyberpunk-themed board game currently in development.
+                                My passion for building extends into the physical and creative realms. Having founded and led the Bozeman Makerspace for over 10 years, I now channel that decade of hardware and prototyping expertise into Fuzzy Robotics, our private skunkworks lab. I am also the lead developer of Null State™: Terminal 01, a cyberpunk card game currently in development.
                             </p>
                             <p class="org-node-body">
-                                I don&apos;t just write code; I design ecosystems&mdash;whether they run on a state server, a global enterprise network, or a tabletop.
+                                I don&apos;t just write code; I design systems&mdash;whether they run on a Linux server, a hardware breadboard, or a tabletop.
                             </p>
                             <p class="org-node-body org-node-links">
                                 <a href="https://www.linkedin.com/in/danielsimser/" target="_blank" rel="noopener">LinkedIn</a>
@@ -103,22 +136,22 @@
                         <div class="org-node org-node-child">
                             <div class="org-node-connector" aria-hidden="true"></div>
                             <div class="org-node-card">
-                                <p class="org-node-label">Game design</p>
-                                <h3 class="org-node-name">Tabletop &amp; narrative collaborators</h3>
+                                <p class="org-node-label">Game design & playtesting</p>
+                                <h3 class="org-node-name">Co-conspirators &amp; Playtesters</h3>
                                 <p class="org-node-body">
-                                    Rotating collaborators who help pressure-test mechanics, pacing, and player experience for PTSD: Terminal 01 and future experiments.
+                                    A rotating squad of friends who help pressure-test mechanics, pacing, and player experience for Null State™: Terminal 01 and future experiments.
                                 </p>
                             </div>
                         </div>
                         <div class="org-node org-node-child">
                             <div class="org-node-connector" aria-hidden="true"></div>
                             <div class="org-node-card org-node-card-cta">
-                                <p class="org-node-label">Future branch</p>
-                                <h3 class="org-node-name">Join us</h3>
+                                <p class="org-node-label">Plugin point</p>
+                                <h3 class="org-node-name">Plug into the grid</h3>
                                 <p class="org-node-body">
-                                    Interested in collaborating on systems design, art, or playtesting? We&apos;re always looking for sharp minds to plug into the lab.
+                                    Want to collaborate on design, code, hardware prototypes, or just playtest early builds? We're always down to hack with sharp minds.
                                 </p>
-                                <a class="btn btn-primary org-node-cta-btn" href="#learn-more">Raise your hand</a>
+                                <a class="btn btn-primary org-node-cta-btn" href="#learn-more">Send a signal</a>
                             </div>
                         </div>
                     </div>
@@ -153,5 +186,123 @@
 
     <script src="js/particles.js"></script>
     <script src="js/scripts.js"></script>
+    <script>
+        (function () {
+            var consoleBody = document.getElementById('consoleBody');
+            var consoleInputCmd = document.getElementById('consoleInputCmd');
+            var btnDiag = document.getElementById('btnDiag');
+            var btnIdea = document.getElementById('btnIdea');
+            var btnJoke = document.getElementById('btnJoke');
+
+            if (!consoleBody) return;
+
+            function writeLine(text, type) {
+                var line = document.createElement('div');
+                line.className = 'console-line' + (type ? ' ' + type : '');
+                line.textContent = text;
+                consoleBody.appendChild(line);
+                consoleBody.scrollTop = consoleBody.scrollHeight;
+            }
+
+            var bootSequencePool = [
+                { text: "[OK] Hamster wheel generator running at 4200 RPM.", type: "success" },
+                { text: "[WARN] Soldering iron detected on desk (HOT).", type: "warn" },
+                { text: "[INFO] Re-routing power from the smart toaster...", type: "muted" },
+                { text: "[OK] Decaf beans successfully filtered and incinerated.", type: "success" },
+                { text: "[FAIL] Sanity check failed: dependency 'sleep' is missing.", type: "error" },
+                { text: "[OK] RGB LEDs locked to maximum brightness.", type: "success" },
+                { text: "[INFO] Pinging nearest geostationary satellite...", type: "muted" },
+                { text: "[WARN] Satellite reply received: 'Please leave us alone.'", type: "warn" },
+                { text: "[OK] Cybernetic pizza crust cleared from optical drive.", type: "success" },
+                { text: "[INFO] Compiling code using pure dark energy...", type: "muted" },
+                { text: "[OK] Sentient AI logic temporarily commented out.", type: "success" }
+            ];
+
+            function shuffleArray(array) {
+                var copy = array.slice();
+                for (var i = copy.length - 1; i > 0; i--) {
+                    var j = Math.floor(Math.random() * (i + 1));
+                    var temp = copy[i];
+                    copy[i] = copy[j];
+                    copy[j] = temp;
+                }
+                return copy;
+            }
+
+            function runBootSequence() {
+                consoleBody.innerHTML = '';
+                writeLine('Initializing skunkworks grid...', 'muted');
+                
+                var shuffled = shuffleArray(bootSequencePool);
+                var itemsToPrint = shuffled.slice(0, 2);
+
+                setTimeout(function () {
+                    writeLine(itemsToPrint[0].text, itemsToPrint[0].type);
+                }, 150);
+
+                setTimeout(function () {
+                    writeLine(itemsToPrint[1].text, itemsToPrint[1].type);
+                }, 300);
+
+                setTimeout(function () {
+                    writeLine('[OK] Active node: Null State™ compiler listening.', 'success');
+                }, 450);
+
+                setTimeout(function () {
+                    writeLine('Click an action below to run operations.', 'muted');
+                }, 600);
+            }
+
+            runBootSequence();
+
+            var prefixes = ["A smart", "A blockchain-powered", "A cyberpunk", "A git-based", "An automated", "A voice-activated", "A solar-powered", "A neural-net"];
+            var nouns = ["coffee machine", "sentry turret", "cat feeder", "toaster", "mechanical keyboard", "compiler", "door lock", "PCB badge", "desk lamp"];
+            var actions = [
+                "that refuses to brew decaf",
+                "that fires Nerf darts on build failures",
+                "that tweets your git history when a test fails",
+                "that makes retro laser sounds on keypress",
+                "that only opens if you solve a cipher",
+                "that writes passive-aggressive PR reviews",
+                "that glows brighter as CPU temp rises",
+                "that automatically orders pizza when coffee runs low"
+            ];
+
+            function getRandomItem(arr) {
+                return arr[Math.floor(Math.random() * arr.length)];
+            }
+
+            btnDiag.addEventListener('click', function () {
+                consoleInputCmd.textContent = 'diagnostics --run';
+                setTimeout(function () {
+                    writeLine('> Executing diagnostics...', 'muted');
+                    writeLine('[OK] Core grid online', 'success');
+                    writeLine('[OK] Caffeine levels: 145%', 'success');
+                    writeLine('[FAIL] Sanity check failed', 'error');
+                    writeLine('[WARN] Sentry turret went sentient (again)', 'warn');
+                }, 200);
+            });
+
+            btnIdea.addEventListener('click', function () {
+                consoleInputCmd.textContent = 'idea --generate';
+                setTimeout(function () {
+                    var p = getRandomItem(prefixes);
+                    var n = getRandomItem(nouns);
+                    var a = getRandomItem(actions);
+                    writeLine('> Compiling random prototype idea...', 'muted');
+                    writeLine('💡 Target: ' + p + ' ' + n + ' ' + a, 'success');
+                }, 200);
+            });
+
+            btnJoke.addEventListener('click', function () {
+                consoleInputCmd.textContent = 'curl --pizza';
+                setTimeout(function () {
+                    writeLine('> Pinging pizza API...', 'muted');
+                    writeLine('ERROR: Pizza API returned 418 (I\'m a teapot)', 'error');
+                    writeLine('Fallback: Double-shot espresso dispatched to developers.', 'warn');
+                }, 200);
+            });
+        })();
+    </script>
 </body>
 </html>
