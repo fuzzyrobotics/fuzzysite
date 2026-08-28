@@ -3,26 +3,41 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="Fuzzy Robotics LLC - Wasteland. Our shop: R&amp;D, experimentation, and first experiments. Null State™: Terminal 01, coming to Kickstarter." />
+    <meta name="description" content="Fuzzy Robotics LLC // Wasteland. Private skunkworks lab for hardware prototyping, systems engineering, and tabletop mechanics. Creators of Null State: Terminal 01™." />
     <meta name="author" content="Fuzzy Robotics LLC" />
-    <title>Fuzzy Robotics - Wasteland</title>
+    <title>Fuzzy Robotics // Wasteland — Skunkworks Lab</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Orbitron:wght@700;900&family=Outfit:wght@300;500;700&family=Rubik+Distressed&family=Teko:wght@500;700&family=Press+Start+2P&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Outfit:wght@400;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" />
     <link href="css/site.css" rel="stylesheet" />
 </head>
 <body>
     <header class="site-header">
+        <div class="navbar-top-status">
+            <div class="window-dots">
+                <span class="window-dot red"></span>
+                <span class="window-dot yellow"></span>
+                <span class="window-dot green"></span>
+            </div>
+            <div>[NODE: BOZEMAN_LAB] // PROTOCOL: SKUNKWORKS // NULLSTATE: V1.0_SHIPPED</div>
+            <div class="nav-status-badge">GRID ACTIVE</div>
+        </div>
+
         <div class="container header-inner">
             <a class="brand" href="#top">
                 <img class="brand-logo" src="/g9314.png" alt="Fuzzy Robotics" width="160" height="53" />
             </a>
             <nav class="nav">
-                <a href="#about">About</a>
-                <a href="#people">People</a>
-                <a href="#experiments">Experiments</a>
-                <a href="#learn-more">Find us</a>
+                <a href="#about">// THE SHOP</a>
+                <a href="#experiments">// EXP-01</a>
+                <a href="#workbench">// WORKBENCH</a>
+                <a href="#operatives">// OPERATIVES</a>
+                <a href="#transmit">// TRANSMIT</a>
+                <a href="https://nullstate.sh/" target="_blank" rel="noopener" class="nav-link-flagship">
+                    <i class="fa-solid fa-terminal"></i> Null State: Terminal 01™ ↗
+                </a>
             </nav>
         </div>
     </header>
@@ -31,15 +46,35 @@
         <section class="hero">
             <canvas class="hero-particles" id="heroParticles" aria-hidden="true"></canvas>
             <div class="container hero-text">
+                <span class="hero-tag"><i class="fa-solid fa-microchip"></i> FUZZY ROBOTICS // PRIVATE SKUNKWORKS LAB</span>
                 <h1 class="hero-title">Wasteland</h1>
-                <p class="hero-subtitle">Our private skunkworks for prototyping and play.<br />first <span class="struck">product</span> experiment coming to Kickstarter 2026</p>
+                <p class="hero-subtitle">
+                    Private research, physical prototyping, and code experiments.<br />
+                    <span class="dymo-torn-tape" style="margin: 0.5rem 0 0.7rem; font-size: 13px; padding: 5px 20px;">
+                        NO KICKSTARTER // WE JUST F***ING BUILT IT
+                    </span><br />
+                    We don't pitch roadmaps or run crowdfunding campaigns. We build systems that excite us and release them into the ether—like our flagship tabletop strategy game, <a href="https://nullstate.sh/" target="_blank" rel="noopener" class="hero-link">Null State: Terminal 01™</a>.
+                </p>
+
+                <div class="btn-group center">
+                    <a class="lab-btn primary" href="#experiments">
+                        <i class="fa-solid fa-terminal"></i> Inspect Experiment 01
+                    </a>
+                    <a class="lab-btn secondary" href="https://nullstate.sh/" target="_blank" rel="noopener">
+                        <i class="fa-solid fa-globe"></i> nullstate.sh Node ↗
+                    </a>
+                    <a class="lab-btn" href="#workbench">
+                        <i class="fa-solid fa-flask"></i> Active Workbench ↓
+                    </a>
+                </div>
             </div>
+
             <div class="hero-mountains" aria-hidden="true">
                 <svg viewBox="0 0 200 24" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
                     <defs>
                         <linearGradient id="mountains-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                            <stop offset="0%" stop-color="var(--neon-blue)" />
-                            <stop offset="50%" stop-color="var(--accent)" />
+                            <stop offset="0%" stop-color="var(--neon-cyan)" />
+                            <stop offset="50%" stop-color="var(--neon-green)" />
                             <stop offset="100%" stop-color="var(--neon-pink)" />
                         </linearGradient>
                     </defs>
@@ -48,110 +83,204 @@
             </div>
         </section>
 
-        <section id="about" class="section section-about">
+        <!-- The Shop & Interactive Lab Terminal -->
+        <section id="about" class="section">
             <div class="container narrow ethos-container">
-                <blockquote class="ethos-quote">
-                    "Some of our experiments get laid to <span class="ethos-highlight ethos-highlight-pink">waste</span>; others, <span class="ethos-highlight ethos-highlight-green">beautiful and wild</span>, make it out into the <span class="ethos-highlight ethos-highlight-cyan">ether</span>."
+                <div class="ethos-quote-card">
+                    <blockquote class="ethos-quote">
+                        "Some of our experiments get laid to <span class="ethos-highlight-pink">waste</span>; others, <span class="ethos-highlight-green">beautiful and wild</span>, make it out into the <span class="ethos-highlight-cyan">ether</span>."
+                    </blockquote>
                     <cite class="ethos-cite">— Ov3rlrd</cite>
-                </blockquote>
+                </div>
             </div>
 
             <div class="container about-layout">
                 <div class="about-main">
-                    <h2 class="section-title">About us</h2>
-                    <p class="lead">We are just a bunch of devs, builders, and artists who really like to make cool shit.</p>
-                    <p>Fuzzy Robotics is our private skunkworks lab. We don’t do roadmaps, stakeholder alignment meetings, or synergy syncs. We just build stuff that excites us: hardware prototypes, cybersecurity card games, dev tools, and whatever else keeps us awake until 3 AM.</p>
+                    <span class="section-badge">// LAB ETHOS</span>
+                    <h2 class="section-title">The Shop</h2>
+                    <p class="lead">We are a small crew of devs, hardware hackers, and artists who like to make cool shit.</p>
+                    <p>Fuzzy Robotics is an independent skunkworks lab based in Montana. We operate without stakeholder alignment meetings, venture capital roadmaps, or crowdfunding delays. We build what keeps us awake until 3 AM: hardware sensor meshes, cybersecurity tabletop mechanics, dev tools, and strange experimental software.</p>
+                    <p>When an artifact reaches critical mass, we ship it into the wild. No gatekeepers, no waiting.</p>
                     
                     <!-- Interactive Skunkworks Console Widget -->
                     <div class="console-box">
                         <div class="console-header">
-                            <span class="console-dot console-dot-red"></span>
-                            <span class="console-dot console-dot-yellow"></span>
-                            <span class="console-dot console-dot-green"></span>
-                            <span class="console-title">skunkworks@fuzzyrobotics: ~</span>
+                            <span class="window-dot red"></span>
+                            <span class="window-dot yellow"></span>
+                            <span class="window-dot green"></span>
+                            <span class="console-title"><i class="fa-solid fa-code"></i> skunkworks@fuzzyrobotics: ~</span>
                         </div>
                         <div class="console-body" id="consoleBody">
                             <div class="console-line muted">Initializing skunkworks grid...</div>
                             <div class="console-line success">[OK] Coffee supply loaded.</div>
-                            <div class="console-line success">[OK] Active node: Null State™ compiler listening.</div>
-                            <div class="console-line muted">Click an action below to run operations.</div>
+                            <div class="console-line warn">[OK] Kickstarter campaign: SKIPPED (Built directly).</div>
+                            <div class="console-line success">[OK] Active artifact: Null State: Terminal 01™ live &amp; reproducible.</div>
+                            <div class="console-line muted">Select an operation below to interact with the node.</div>
                         </div>
                         <div class="console-input-line">
-                            <span class="console-prompt">fuzzyrobotics$</span>
+                            <span class="console-prompt">skunkworks$</span>
                             <span class="console-input-cmd" id="consoleInputCmd">ready</span>
                             <span class="console-cursor"></span>
                         </div>
                         <div class="console-actions">
-                            <button type="button" class="console-btn" id="btnDiag">Run Diags</button>
-                            <button type="button" class="console-btn" id="btnIdea">Generate Idea</button>
-                            <button type="button" class="console-btn" id="btnJoke">Order Pizza</button>
+                            <button type="button" class="console-btn" id="btnDiag"><i class="fa-solid fa-stethoscope"></i> Diags</button>
+                            <button type="button" class="console-btn" id="btnIdea"><i class="fa-solid fa-lightbulb"></i> Idea</button>
+                            <button type="button" class="console-btn" id="btnExploit"><i class="fa-solid fa-skull"></i> Exploit</button>
+                            <button type="button" class="console-btn" id="btnJoke"><i class="fa-solid fa-coffee"></i> Coffee</button>
                         </div>
                     </div>
                 </div>
+
+                <!-- Experiment 01: Null State: Terminal 01™ -->
                 <div id="experiments" class="experiments-side">
-                    <h2 class="section-title">Experiments</h2>
-                    <div class="game-card">
-                        <h3 class="game-card-title">Null State™: Terminal 01 <span class="product-badge">First <span class="struck">product</span> experiment</span></h3>
-                        <p class="game-card-meta">Card game · 2–6 players · ~1 hr · Coming to Kickstarter</p>
-                        <p>You’re in the terminal - dark nets, data streams, high-stakes targets. Scan the network, stack exploits, and hit locations before the rest. Disrupt markets, harden positions, plant intel. Win with fame from hacks and end-game data value on the blockchain. The game uses data cards, location targets, and three market decks (Black hat, Grey hat, White hat) for a full tabletop experience.</p>
-                        <p class="game-card-links">
-                            <a class="btn btn-primary" href="https://nullstate.sh/" target="_blank" rel="noopener">Visit Null State™: Terminal 01 Website</a>
+                    <div class="experiment-card">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+                            <span class="experiment-id">EXP-01 // FLAGSHIP ARTIFACT</span>
+                            <span class="experiment-status-tag"><i class="fa-solid fa-circle-check"></i> SHIPPED &amp; LIVE</span>
+                        </div>
+
+                        <h3 class="experiment-title">Null State: Terminal 01™</h3>
+                        <p class="experiment-specs">1–4 Players · 45–60 Mins · Ages 14+ · Tabletop Strategy System</p>
+
+                        <p class="experiment-desc">
+                            A cybersecurity strategy card game built to simulate high-stakes netrunner exploits, volatile market crashes, and decentralized blockchain scoring without generic tropes. Program encrypted data fragments into 3 dedicated memory stacks, manipulate 6 fluctuating market tracks in real time, and execute rule-breaking Black, Grey, and White Hat exploits.
+                        </p>
+
+                        <div class="mechanics-grid">
+                            <div class="mechanic-chip">
+                                <strong>Dynamic Markets:</strong> 6 tracks (1–10) with real-time flash crashes
+                            </div>
+                            <div class="mechanic-chip">
+                                <strong>Memory Stacks:</strong> 3 active dedicated program slots
+                            </div>
+                            <div class="mechanic-chip">
+                                <strong>Hat Exploits:</strong> Black, Grey, and White Hat decks
+                            </div>
+                            <div class="mechanic-chip">
+                                <strong>Blockchain Ledger:</strong> SYSM end-game data scoring
+                            </div>
+                        </div>
+
+                        <div class="lab-specs-box">
+                            <strong>[PHYSICAL MANIFEST]:</strong> 110 Data Cards (92 Script + 18 Glitch) · 24 Jumbo Location Sectors · 72 Market Cards · 6 Operator Dossiers · 6 Player Aids · Tabletop Gameboard · Custom D6 Scan Die · 48 Wooden Control Cubes
+                        </div>
+
+                        <div class="btn-group">
+                            <a class="lab-btn primary" href="https://nullstate.sh/" target="_blank" rel="noopener">
+                                <i class="fa-solid fa-globe"></i> nullstate.sh Documentation ↗
+                            </a>
+                            <a class="lab-btn secondary" href="https://nullstate.sh/simulator" target="_blank" rel="noopener">
+                                <i class="fa-solid fa-play"></i> Web Simulator ⚡
+                            </a>
+                            <a class="lab-btn" href="https://nullstate.sh/nullstate_pnp_ZeroDay.zip" target="_blank" rel="noopener">
+                                <i class="fa-solid fa-download"></i> Zero-Day PnP (ZIP)
+                            </a>
+                            <a class="lab-btn" href="https://boardgamegeek.com/boardgame/455549/null-state-terminal-01" target="_blank" rel="noopener">
+                                <i class="fa-solid fa-dice-d20"></i> BGG
+                            </a>
+                            <a class="lab-btn" href="https://www.thegamecrafter.com/games/null-state:-terminal-01" target="_blank" rel="noopener">
+                                <i class="fa-solid fa-box"></i> The Game Crafter
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Active Workbench Section -->
+        <section id="workbench" class="section">
+            <div class="container">
+                <span class="section-badge">// ACTIVE LAB BENCH</span>
+                <h2 class="section-title">Workbench &amp; R&amp;D</h2>
+                <p class="section-desc">Current builds, embedded hardware prototypes, and experimental tooling under development.</p>
+
+                <div class="bench-grid">
+                    <div class="bench-card">
+                        <div class="bench-header">
+                            <span class="bench-id">EXP-02</span>
+                            <span class="bench-status active">[ACTIVE BENCH]</span>
+                        </div>
+                        <h3 class="bench-title">Embedded Hardware &amp; IoT</h3>
+                        <p class="bench-desc">
+                            Rooted in a decade of leading the Bozeman Makerspace. We design custom ESP32/ARM sensor nodes, microcontroller telemetry firmware, wearable PCB circuit badges, and physical interface hardware.
+                        </p>
+                    </div>
+
+                    <div class="bench-card">
+                        <div class="bench-header">
+                            <span class="bench-id">EXP-03</span>
+                            <span class="bench-status active">[ACTIVE BENCH]</span>
+                        </div>
+                        <h3 class="bench-title">Generative Tooling &amp; Simulators</h3>
+                        <p class="bench-desc">
+                            Building open-source browser simulators, automated card layout generation pipelines, SVG/canvas asset compilers, and retro terminal interfaces that bridge digital engineering and physical games.
+                        </p>
+                    </div>
+
+                    <div class="bench-card">
+                        <div class="bench-header">
+                            <span class="bench-id">EXP-04</span>
+                            <span class="bench-status r-and-d">[R&amp;D / PLAYTESTING]</span>
+                        </div>
+                        <h3 class="bench-title">Off-Grid Anomaly System</h3>
+                        <p class="bench-desc">
+                            The next modular expansion for Null State: Terminal 01™, introducing 36 isolated off-grid deep-sector jumbo locations, air-gapped subnet mechanics, and zero-day anomaly events.
                         </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="people" class="section section-people">
+        <!-- People / Operatives Section -->
+        <section id="operatives" class="section">
             <div class="container narrow">
+                <span class="section-badge">// LAB OPERATIVES</span>
                 <h2 class="section-title">People</h2>
-                <p class="section-desc">An at-a-glance tree of who is behind Wasteland and the experiments coming out of Fuzzy Robotics.</p>
+                <p class="section-desc">The builders, tinkerers, and instigators behind the Fuzzy Robotics skunkworks.</p>
 
                 <div class="org-tree">
-                    <div class="org-node org-node-root">
-                        <div class="org-node-line-down" aria-hidden="true"></div>
+                    <div class="org-node-root">
                         <div class="org-node-card">
                             <div class="org-node-header">
                                 <img class="org-node-avatar" src="assets/img/1582561920860.jpg" alt="Portrait of Daniel M Simser" />
-                                <div class="org-node-header-text">
-                                    <p class="org-node-label">Principal Instigator</p>
+                                <div>
+                                    <span class="org-node-label">Principal Instigator</span>
                                     <h3 class="org-node-name">Daniel M Simser</h3>
-                                    <p class="org-node-role">Also known as Ov3rlrd · Founder &amp; Chief Tinkerer</p>
+                                    <p class="org-node-role">Also known as Ov3rlrd // Founder &amp; Chief Tinkerer</p>
                                 </div>
                             </div>
                             <p class="org-node-tagline">20+ years of systems, infrastructure, and hardware prototyping.</p>
                             <p class="org-node-body">
-                                My passion for building extends into the physical and creative realms. Having founded and led the Bozeman Makerspace for over 10 years, I now channel that decade of hardware and prototyping expertise into Fuzzy Robotics, our private skunkworks lab. I am also the lead developer of Null State™: Terminal 01, a cyberpunk card game currently in development.
+                                My passion for building extends across physical hardware and creative systems. Having founded and led the Bozeman Makerspace for over 10 years, I now channel that decade of physical prototyping and maker expertise into Fuzzy Robotics. I am also the creator and lead designer of <strong>Null State: Terminal 01™</strong>.
                             </p>
                             <p class="org-node-body">
-                                I don&apos;t just write code; I design systems&mdash;whether they run on a Linux server, a hardware breadboard, or a tabletop.
+                                I don&apos;t just write software; I design full-stack systems—whether they run on Linux servers, hardware breadboards, or physical tabletops.
                             </p>
-                            <p class="org-node-body org-node-links">
-                                <a href="https://www.linkedin.com/in/danielsimser/" target="_blank" rel="noopener">LinkedIn</a>
-                            </p>
+                            <div>
+                                <a href="https://www.linkedin.com/in/danielsimser/" target="_blank" rel="noopener" class="lab-btn" style="padding: 4px 10px; font-size: 11px;">
+                                    <i class="fa-brands fa-linkedin"></i> LinkedIn Node ↗
+                                </a>
+                            </div>
                         </div>
                     </div>
 
                     <div class="org-node-children">
-                        <div class="org-node org-node-child">
-                            <div class="org-node-connector" aria-hidden="true"></div>
-                            <div class="org-node-card">
-                                <p class="org-node-label">Game design & playtesting</p>
-                                <h3 class="org-node-name">Co-conspirators &amp; Playtesters</h3>
-                                <p class="org-node-body">
-                                    A rotating squad of friends who help pressure-test mechanics, pacing, and player experience for Null State™: Terminal 01 and future experiments.
-                                </p>
-                            </div>
+                        <div class="org-node-card">
+                            <span class="org-node-label">Playtest Squad</span>
+                            <h3 class="org-node-name" style="font-size: 1.15rem; margin-top: 2px;">Co-conspirators</h3>
+                            <p class="org-node-body" style="font-size: 12.5px;">
+                                A rotating crew of friends, engineers, and playtesters who help stress-test mechanics, hardware prototypes, and balance systems under real-world conditions.
+                            </p>
                         </div>
-                        <div class="org-node org-node-child">
-                            <div class="org-node-connector" aria-hidden="true"></div>
-                            <div class="org-node-card org-node-card-cta">
-                                <p class="org-node-label">Plugin point</p>
-                                <h3 class="org-node-name">Plug into the grid</h3>
-                                <p class="org-node-body">
-                                    Want to collaborate on design, code, hardware prototypes, or just playtest early builds? We're always down to hack with sharp minds.
-                                </p>
-                                <a class="btn btn-primary org-node-cta-btn" href="#learn-more">Send a signal</a>
+
+                        <div class="org-node-card">
+                            <span class="org-node-label">Open Node</span>
+                            <h3 class="org-node-name" style="font-size: 1.15rem; margin-top: 2px;">Collaborate</h3>
+                            <p class="org-node-body" style="font-size: 12.5px;">
+                                Have an interesting hardware build, game mechanic, or open tool you want to collaborate on? We're always open to hacking with sharp minds.
+                            </p>
+                            <div style="margin-top: 0.5rem;">
+                                <a class="lab-btn primary" href="#transmit" style="font-size: 11px; padding: 4px 10px;">Transmit Signal</a>
                             </div>
                         </div>
                     </div>
@@ -159,28 +288,41 @@
             </div>
         </section>
 
-        <section id="learn-more" class="section section-learn-more">
+        <!-- Signal / Contact Section -->
+        <section id="transmit" class="section">
             <div class="container narrow">
-                <h2 class="section-title">Find us</h2>
-                <p class="section-desc">Leave your details and we’ll email you updates on our experiments and Kickstarter.</p>
-                <form class="learn-more-form" name="learn-more" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-                    <input type="hidden" name="form-name" value="learn-more" />
-                    <p class="form-honeypot" aria-hidden="true">
-                        <label>Don’t fill this out: <input name="bot-field" /></label>
-                    </p>
-                    <input type="text" name="name" placeholder="Your name" required />
-                    <input type="email" name="email" placeholder="Your email" required aria-label="Your email" />
-                    <textarea name="message" rows="3" placeholder="What are you interested in? (optional)" aria-label="Message"></textarea>
-                    <button type="submit" class="btn btn-primary">Send</button>
-                </form>
+                <div class="signal-card">
+                    <span class="section-badge">// TRANSMIT SIGNAL</span>
+                    <h2 class="section-title">Drop A Line</h2>
+                    <p class="section-desc" style="margin-bottom: 1rem;">Connect with the lab, ask about prototypes, or collaborate on future experiments.</p>
+
+                    <form class="signal-form" name="learn-more" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                        <input type="hidden" name="form-name" value="learn-more" />
+                        <p class="form-honeypot" aria-hidden="true">
+                            <label>Don’t fill this out: <input name="bot-field" /></label>
+                        </p>
+                        <input type="text" name="name" class="signal-input" placeholder="Name / Handle" required />
+                        <input type="email" name="email" class="signal-input" placeholder="Email Address" required aria-label="Your email" />
+                        <textarea name="message" class="signal-input" rows="3" placeholder="Signal content / prototype notes..." aria-label="Message"></textarea>
+                        <button type="submit" class="lab-btn primary" style="width: fit-content; cursor: pointer;">
+                            <i class="fa-solid fa-paper-plane"></i> Transmit Packet
+                        </button>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
 
     <footer class="site-footer">
         <div class="container footer-inner">
-            <p class="copyright">© Fuzzy Robotics LLC</p>
-            <p class="footer-location">45.86° N, 111.33° W</p>
+            <p>© Fuzzy Robotics LLC // Skunkworks Lab // Null State: Terminal 01™</p>
+            <div class="footer-links">
+                <a href="https://nullstate.sh/" target="_blank" rel="noopener"><i class="fa-solid fa-terminal"></i> nullstate.sh</a>
+                <a href="https://nullstate.sh/simulator" target="_blank" rel="noopener"><i class="fa-solid fa-play"></i> Simulator</a>
+                <a href="https://boardgamegeek.com/boardgame/455549/null-state-terminal-01" target="_blank" rel="noopener"><i class="fa-solid fa-dice-d20"></i> BGG</a>
+                <a href="https://www.thegamecrafter.com/games/null-state:-terminal-01" target="_blank" rel="noopener"><i class="fa-solid fa-box"></i> TGC</a>
+            </div>
+            <p class="footer-location"><i class="fa-solid fa-location-dot"></i> 45.86° N, 111.33° W [Bozeman, MT]</p>
         </div>
     </footer>
 
@@ -192,6 +334,7 @@
             var consoleInputCmd = document.getElementById('consoleInputCmd');
             var btnDiag = document.getElementById('btnDiag');
             var btnIdea = document.getElementById('btnIdea');
+            var btnExploit = document.getElementById('btnExploit');
             var btnJoke = document.getElementById('btnJoke');
 
             if (!consoleBody) return;
@@ -206,15 +349,15 @@
 
             var bootSequencePool = [
                 { text: "[OK] Hamster wheel generator running at 4200 RPM.", type: "success" },
-                { text: "[WARN] Soldering iron detected on desk (HOT).", type: "warn" },
+                { text: "[WARN] Soldering iron detected on bench (HOT).", type: "warn" },
                 { text: "[INFO] Re-routing power from the smart toaster...", type: "muted" },
                 { text: "[OK] Decaf beans successfully filtered and incinerated.", type: "success" },
                 { text: "[FAIL] Sanity check failed: dependency 'sleep' is missing.", type: "error" },
-                { text: "[OK] RGB LEDs locked to maximum brightness.", type: "success" },
+                { text: "[OK] RGB logic analyzer locked to maximum capture rate.", type: "success" },
                 { text: "[INFO] Pinging nearest geostationary satellite...", type: "muted" },
-                { text: "[WARN] Satellite reply received: 'Please leave us alone.'", type: "warn" },
-                { text: "[OK] Cybernetic pizza crust cleared from optical drive.", type: "success" },
-                { text: "[INFO] Compiling code using pure dark energy...", type: "muted" },
+                { text: "[WARN] Satellite reply: 'Please leave us alone.'", type: "warn" },
+                { text: "[OK] Custom PCB firmware flashed successfully.", type: "success" },
+                { text: "[INFO] Compiling game state simulator using pure dark energy...", type: "muted" },
                 { text: "[OK] Sentient AI logic temporarily commented out.", type: "success" }
             ];
 
@@ -245,12 +388,16 @@
                 }, 300);
 
                 setTimeout(function () {
-                    writeLine('[OK] Active node: Null State™ compiler listening.', 'success');
+                    writeLine('[OK] Kickstarter campaign: SKIPPED (Built directly).', 'warn');
                 }, 450);
 
                 setTimeout(function () {
-                    writeLine('Click an action below to run operations.', 'muted');
+                    writeLine('[OK] Active artifact: Null State: Terminal 01™ live & reproducible.', 'success');
                 }, 600);
+
+                setTimeout(function () {
+                    writeLine('Select an operation below to interact with the node.', 'muted');
+                }, 750);
             }
 
             runBootSequence();
@@ -268,6 +415,13 @@
                 "that automatically orders pizza when coffee runs low"
             ];
 
+            var exploits = [
+                { cmd: "deploy_exploit.sh --blackhat", result: "[EXEC] Fork Bomb planted on Financial track. Market volatility spike detected!" },
+                { cmd: "flash_crash.py --greyhat", result: "[EXEC] Grey Hat disruption executed: Government track dropped from 8 to 2." },
+                { cmd: "godmode_override.sh --whitehat", result: "[EXEC] White Hat counter-defense active. Firewall hardening complete (+3 Fame)." },
+                { cmd: "blockchain_hardfork.sh --audit", result: "[EXEC] SYSM Ledger audited: 42 data fragments successfully banked." }
+            ];
+
             function getRandomItem(arr) {
                 return arr[Math.floor(Math.random() * arr.length)];
             }
@@ -278,7 +432,8 @@
                     writeLine('> Executing diagnostics...', 'muted');
                     writeLine('[OK] Core grid online', 'success');
                     writeLine('[OK] Caffeine levels: 145%', 'success');
-                    writeLine('[FAIL] Sanity check failed', 'error');
+                    writeLine('[OK] Null State node: ACTIVE (v1.0 release)', 'success');
+                    writeLine('[FAIL] Sanity check failed (Normal operating state)', 'error');
                     writeLine('[WARN] Sentry turret went sentient (again)', 'warn');
                 }, 200);
             });
@@ -294,12 +449,24 @@
                 }, 200);
             });
 
+            if (btnExploit) {
+                btnExploit.addEventListener('click', function () {
+                    var exp = getRandomItem(exploits);
+                    consoleInputCmd.textContent = exp.cmd;
+                    setTimeout(function () {
+                        writeLine('> Running Terminal 01 exploit sequence...', 'muted');
+                        writeLine(exp.result, 'warn');
+                        writeLine('[OK] Target subnet cracked. Fame awarded.', 'success');
+                    }, 200);
+                });
+            }
+
             btnJoke.addEventListener('click', function () {
-                consoleInputCmd.textContent = 'curl --pizza';
+                consoleInputCmd.textContent = 'brew --coffee --double-shot';
                 setTimeout(function () {
-                    writeLine('> Pinging pizza API...', 'muted');
-                    writeLine('ERROR: Pizza API returned 418 (I\'m a teapot)', 'error');
-                    writeLine('Fallback: Double-shot espresso dispatched to developers.', 'warn');
+                    writeLine('> Heating espresso boiler...', 'muted');
+                    writeLine('[OK] High-pressure extraction in progress (9 bar).', 'success');
+                    writeLine('[WARN] Developers running at 250% clock speed.', 'warn');
                 }, 200);
             });
         })();
