@@ -1,4 +1,4 @@
-/* Fuzzy Robotics - Null State™: Terminal 01 site */
+/* Fuzzy Robotics - Null State: Terminal 01™ site */
 window.addEventListener('DOMContentLoaded', function () {
     var header = document.querySelector('.site-header');
     if (header) {

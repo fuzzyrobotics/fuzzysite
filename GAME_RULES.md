@@ -1,17 +1,23 @@
-# Null State™: Terminal 01 - Game Rules
+# Null State: Terminal 01™ - Game Rules
 
-A cybersecurity-themed board game for 2–6 players. Hack locations, collect data cards, move market tracks, and score **fame** plus **end-game data value** to win.
+A cybersecurity-themed tabletop strategy card game for 1–4 players (45–60 Mins, Ages 14+). Hack locations, program memory stacks, deploy Hat exploits, move market tracks, and score **fame** plus **end-game blockchain data value** to win.
+
+- **Official Website:** [https://nullstate.sh/](https://nullstate.sh/)
+- **Online Interactive Rulebook:** [https://nullstate.sh/rules/](https://nullstate.sh/rules/)
+- **Web Simulator:** [https://nullstate.sh/simulator](https://nullstate.sh/simulator)
+- **The Game Crafter Store:** [https://www.thegamecrafter.com/games/null-state:-terminal-01](https://www.thegamecrafter.com/games/null-state:-terminal-01)
 
 ---
 
 ## Components
 
 - **Gameboard** - Markets (6 tracks, 1–10), market dice spots (Black / Grey / White hat), network scan (1–6), data card deck area.
-- **Data cards** - Deck of data cards (see [GAME_CARDS.md](GAME_CARDS.md)). Each card has fragments, suit, SYSM value, and information type (AI Intel, Government, Financial, Personal, Market Intel, Wildcard).
-- **Location cards** - Use 3 cards for 2 players, 6 cards for 3–4 players, and 9 cards for 5–6 players; one is turned face up at start. Every two rounds of play, reveal one new location at random until the max number of locations is revealed. Each location lists required fragments, fame reward, and data card reward.
-- **Dice** - One d6 per dice spot (market dice + network scan). Roll at setup and mark with cubes.
-- **Cubes / tokens** - Mark market and scan values (1–6 or 1–10), control on locations, and player identity if needed.
-- **Turn order cards (player aids)** - One per player (Player 1–6); each lists the six turn actions. Jumbo size 3.5" × 5.5" so all actions (including Blockchain) fit.
+- **Data cards** - 110 Data Cards (92 Script + 18 Glitch Pack 01; see [GAME_CARDS_REFERENCE.md](GAME_CARDS_REFERENCE.md)). Each card has fragments, suit, SYSM value, and information type.
+- **Location cards** - 24 Jumbo Location Cards (3 cards for 2 players, 6 cards for 3–4 players); one is turned face up at start. Every two rounds of play, reveal one new location at random until the max number of locations is revealed. Each location lists required fragments, fame reward, and data card reward.
+- **Market cards** - 72 Market Cards across Black Hat, Grey Hat, and White Hat decks.
+- **Operator Dossiers & Player Aids** - 6 Operator Dossiers + 6 Jumbo Player Reference Aids (3.5" × 5.5").
+- **Dice** - One custom d6 scan die. Roll at setup and mark with cubes.
+- **Cubes / tokens** - 48 Player Control Cubes to mark market and scan values, control on locations, and player identity.
 
 ---
 
