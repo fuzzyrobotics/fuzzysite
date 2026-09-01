@@ -127,6 +127,14 @@
         mouse.y = e.clientY - rect.top;
     }
 
+    function onTouchMove(e) {
+        if (e.touches.length > 0) {
+            var rect = hero.getBoundingClientRect();
+            mouse.x = e.touches[0].clientX - rect.left;
+            mouse.y = e.touches[0].clientY - rect.top;
+        }
+    }
+
     function onMouseLeave() {
         mouse.x = null;
         mouse.y = null;
@@ -135,15 +143,17 @@
     function init() {
         setSize();
         createParticles();
-        hero.addEventListener('mousemove', onMouseMove);
-        hero.addEventListener('mouseleave', onMouseLeave);
+        hero.addEventListener('mousemove', onMouseMove, { passive: true });
+        hero.addEventListener('mouseleave', onMouseLeave, { passive: true });
+        hero.addEventListener('touchmove', onTouchMove, { passive: true });
+        hero.addEventListener('touchend', onMouseLeave, { passive: true });
         draw();
     }
 
     window.addEventListener('resize', function () {
         setSize();
         createParticles();
-    });
+    }, { passive: true });
 
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', init);

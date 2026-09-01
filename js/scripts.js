@@ -1,5 +1,10 @@
-/* Fuzzy Robotics - Null State: Terminal 01™ site */
-window.addEventListener('DOMContentLoaded', function () {
+/**
+ * FUZZY ROBOTICS // WASTELAND
+ * Clean Skunkworks Scripts
+ */
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Header scroll background elevation
     var header = document.querySelector('.site-header');
     if (header) {
         function onScroll() {
